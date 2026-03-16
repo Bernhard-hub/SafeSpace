@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#grad)"/>
+  <!-- Shield icon -->
+  <path d="M256 100c-80 0-140 30-140 30v140c0 80 60 130 140 160 80-30 140-80 140-160V130s-60-30-140-30z"
+        fill="white"
+        fill-opacity="0.95"/>
+  <!-- Heart inside shield -->
+  <path d="M256 220c-20-30-60-30-70 0-10 35 70 80 70 80s80-45 70-80c-10-30-50-30-70 0z"
+        fill="#6366f1"/>
+  <!-- Checkmark -->
+  <path d="M220 300l25 25 50-50"
+        stroke="#10b981"
+        stroke-width="16"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+</svg>

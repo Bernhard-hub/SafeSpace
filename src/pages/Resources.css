@@ -1,0 +1,384 @@
+.resources {
+  max-width: 1200px;
+}
+
+/* Category Navigation */
+.category-nav {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-sm);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: transparent;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.category-btn:hover {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+}
+
+.category-btn.active {
+  background: var(--color-bg-card);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.category-btn svg {
+  flex-shrink: 0;
+}
+
+/* Resource Section */
+.resource-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-lg);
+}
+
+.section-intro {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
+}
+
+/* Hotlines Grid */
+.hotlines-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.hotline-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.hotline-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.hotline-country {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.hotline-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+}
+
+.hotline-number {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.hotline-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.hotline-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Legal List */
+.legal-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.legal-item {
+  overflow: hidden;
+}
+
+.legal-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.legal-header:hover {
+  background: var(--color-bg-secondary);
+}
+
+.legal-header svg:first-child {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.legal-header span {
+  flex: 1;
+}
+
+.legal-header svg:last-child {
+  color: var(--color-text-muted);
+}
+
+.legal-content {
+  padding: 0 var(--space-lg) var(--space-lg);
+  padding-left: calc(var(--space-lg) + 20px + var(--space-md));
+}
+
+.legal-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+/* Platforms Grid */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.platform-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.platform-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+}
+
+.platform-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.platform-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Hotline specialization */
+.hotline-specialization {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+}
+
+/* Phenomena Search */
+.phenomena-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--color-border-light);
+}
+
+.phenomena-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.phenomena-search svg {
+  color: var(--color-text-muted);
+}
+
+/* Glossary List */
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.glossary-item {
+  overflow: hidden;
+}
+
+.glossary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  text-align: left;
+}
+
+.glossary-header h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.glossary-header svg {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.glossary-definition {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.glossary-details {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.glossary-example,
+.glossary-pedagogical {
+  margin-bottom: var(--space-md);
+}
+
+.glossary-example h4,
+.glossary-pedagogical h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.glossary-example p {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--color-primary-bg);
+}
+
+.glossary-pedagogical p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Placeholder Note */
+.placeholder-note {
+  background: var(--color-bg-accent);
+  border: 2px dashed var(--color-accent-warm);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.placeholder-note p {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-secondary);
+}
+
+.placeholder-note ul {
+  margin: 0;
+  padding-left: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.placeholder-note li {
+  margin-bottom: var(--space-xs);
+}
+
+.placeholder-badge {
+  background: var(--color-bg-accent);
+  border: 1px dashed var(--color-accent-warm);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hotlines-grid,
+  .glossary-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .platforms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .category-nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  
+  .category-btn {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .platforms-grid {
+    grid-template-columns: 1fr;
+  }
+}
