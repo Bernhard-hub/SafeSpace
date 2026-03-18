@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Shield, BookOpen, Users, Clock, Download, Play, ExternalLink, FileText, ChevronDown, ChevronRight, Copy, CheckCircle } from 'lucide-react'
+import { Shield, BookOpen, Users, Clock, Download, Play, ExternalLink, FileText, ChevronDown, ChevronRight, Copy, CheckCircle, MessageCircle, Lightbulb, Heart, Table, HelpCircle } from 'lucide-react'
 import './Prevention.css'
 
 const workshopModules = [
@@ -48,7 +48,81 @@ const workshopModules = [
     materials: ['Präsentation', 'Handout', 'FAQ'],
     phases: []
   },
+  {
+    id: 5,
+    title: 'Sicherer Umgang im Netz – Datenschutz & Privatsphäre',
+    duration: '180 Min (4 Einheiten)',
+    targetGroup: 'Kinder ab 10 Jahren',
+    description: 'Bewusstsein für digitale Identität schaffen; Kontrolle über eigene Daten im Netz; Privatsphäre-Einstellungen in sozialen Netzwerken verstehen; Wissen über Datenschutz und das Recht am eigenen Bild erlangen.',
+    materials: ['Internetzugang (Smartphone/Tablet/Laptop)', 'Beamer', 'Arbeitsblatt Datenschutz', 'Zugriff auf Suchmaschinen', 'Quiz-Tools (Mentimeter/Kahoot)', 'Infosheets für Eltern'],
+    phases: [
+      { time: 'Einheit 1 (45 Min)', phase: 'Privatsphäre', content: '10 Min: Einstieg – Übung „My AI weiß alles über mich" (interaktive Online-Übung). 10 Min: Bewusstsein schaffen – Diskussion zur digitalen Identität (Brainstorming). 10 Min: Spurensuche – Namenssuche, Google Alert und umgekehrte Bildersuche (Eigenrecherche). 15 Min: Privatsphäre-Themenblock – Definition, Schutz persönlicher Daten, Umgang mit Fotos, Recht am eigenen Bild (Vortrag & Diskussion). Abschluss: Infoblatt für Eltern & Kinder über Privatsphäre-Einstellungen.' },
+      { time: 'Einheit 2 (45 Min)', phase: 'Datenschutz', content: '5 Min: Einstieg – Inhaltsabfrage über Privatsphäre, Austausch über Eltern-Gespräche (Reflexion). 20 Min: Datenschutz – Definition & Datensammlung: Wer sammelt was? (Interaktiver Vortrag). 20 Min: Wichtige Einstellungen – Menti-Abfrage: Welche sozialen Netzwerke werden genutzt? Schüler:innen erstellen aus Infosheets Präsentationen und zeigen Mitschüler:innen wichtige Einstellungen. 10 Min: Internetspuren am Computer beseitigen (Vortrag). 10 Min: Abschluss – Arbeitsblatt Datenschutz „Was gehört ins Netz?" und Infoblatt für Eltern.' },
+      { time: 'Einheit 3 (45 Min)', phase: 'Sichere Kommunikation', content: '5 Min: Rückblick – Inhaltsabfrage der letzten Einheit, Eltern-Gespräche, neue Erkenntnisse (Reflexion). 15 Min: Einstieg – Wie kommunizieren Jugendliche im Internet? (Interaktive Umfrage über Menti + Fakteneinstieg). 10 Min: Emojis und ihre Bedeutungen. 10 Min: Urheberrecht. 10 Min: Digital Services Act. Abschluss: Notfallplan – Was tun bei Hackangriffen?' },
+      { time: 'Einheit 4 (85–90 Min)', phase: 'Abschluss & Quiz', content: 'Reflexion und spielerisches Quiz: Safer Internet Schnitzeljagd (Online-Quiz). Wiederholung aller Inhalte der vorherigen Einheiten. Feedback-Runde.' },
+    ]
+  },
 ]
+
+const myAIExercise = {
+  title: 'Übung: My AI weiß alles über mich',
+  subtitle: 'Zielgruppe: Schüler:innen die Snapchat nutzen',
+  goals: [
+    'Informationskompetenz der Schüler:innen stärken',
+    'Verstehen, warum Privatsphäre & Datenschutz wichtig ist',
+    'Wissen, wie man seine Daten schützen kann',
+    'Neue Tools im Internet einschätzen und nutzen können'
+  ],
+  preparation: 'Erheben Sie, wie viele Kinder in der Klasse Snapchat verwenden und welche Tools (z. B. Streaks, Snapmap) sie dort nutzen. Diskutieren Sie mit jenen Kindern, die MyAI nutzen, was sie daran mögen und was nicht.',
+  tableRows: [
+    { knows: 'wo ich wohne', why: 'durch den Standort', action: 'Standort deaktivieren' },
+    { knows: 'welche Sprache(n) ich spreche', why: 'durch den Standort und wie ich in MyAI schreibe', action: 'Standort deaktivieren' },
+    { knows: 'was mich interessiert (Hobbies, Vorlieben)', why: 'könnte bei „Interessen" angeklickt sein oder im Chat besprochen', action: 'Interessen verändern, nicht darüber schreiben' },
+    { knows: 'wo ich mich gerade befinde', why: 'durch die Snapmap', action: 'Snapmap und Standort deaktivieren' },
+    { knows: 'wie es mir geht', why: 'habe ich im Chat besprochen', action: 'nicht darüber schreiben' },
+    { knows: 'wer meine Freund:innen sind', why: 'habe ich im Chat besprochen', action: 'nicht darüber schreiben' },
+  ],
+  discussion: 'Überlegen Sie gemeinsam mit den Schüler:innen, welche Vor- und Nachteile Tools wie MyAI haben können. Brainstorming auf Tafel/Whiteboard. Diskutieren Sie die Ergebnisse und gehen Sie auf mögliche Ängste der Schüler:innen ein.'
+}
+
+const conversationGuide = {
+  sections: [
+    {
+      title: '2.1 Eröffnung des Gesprächs',
+      goal: 'Vertrauen schaffen und Ängste nehmen',
+      examples: [
+        '„Es ist wirklich mutig und gut, dass du heute zu mir gekommen bist, um darüber zu reden."',
+        '„Ich höre dir jetzt ganz ruhig zu. Wir finden gemeinsam eine Lösung, ohne dass du Vorwürfe befürchten musst."'
+      ]
+    },
+    {
+      title: '2.2 Wichtige Fragen zur Situationserfassung',
+      goal: 'Den technischen und sozialen Status sachlich klären',
+      examples: [
+        '„Kannst du mir beschreiben, was genau passiert ist?"',
+        '„Hast du im Moment noch Zugriff auf dein Profil oder wurde das Passwort schon geändert?"',
+        '„Sind in deinem Namen schon Nachrichten verschickt worden, von denen du nichts weißt?"'
+      ]
+    },
+    {
+      title: '2.3 Empathische Reaktionen',
+      goal: 'Emotionale Unterstützung signalisieren',
+      examples: [
+        '„Ich kann verstehen, dass dich das gerade sehr belastet. So etwas kann leider auch Erwachsenen passieren."',
+        '„Du bist nicht schuld daran, dass jemand anderes deine Daten missbraucht oder dich bedrängt."'
+      ]
+    },
+    {
+      title: '2.4 Abschluss und nächste Schritte',
+      goal: 'Handlungsfähigkeit wiederherstellen',
+      examples: [
+        '„Wir ändern jetzt sofort deine Passwörter und aktivieren die Zwei-Faktor-Authentifizierung."',
+        '„Wir informieren deine engsten Freunde, damit sie nicht auf Fake-Nachrichten hereinfallen."',
+        '„Ich begleite dich dabei, den Vorfall direkt bei der Plattform zu melden."'
+      ]
+    }
+  ]
+}
 
 const textTemplates = {
   einleitung: [
@@ -177,6 +251,96 @@ function Prevention() {
               )}
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Übungen & Aktivitäten */}
+      <section className="section">
+        <h2 className="section-title">
+          <Lightbulb size={24} />
+          Übungen & Aktivitäten
+        </h2>
+
+        {/* My AI Exercise */}
+        <div className="card" style={{ marginBottom: '1rem' }}>
+          <button className="template-group-header" onClick={() => toggleTemplate('myai')}>
+            <h3><Smartphone size={18} style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />{myAIExercise.title}</h3>
+            {expandedTemplates['myai'] ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+          </button>
+          {expandedTemplates['myai'] && (
+            <div style={{ marginTop: '1rem' }}>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', fontStyle: 'italic' }}>{myAIExercise.subtitle}</p>
+
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ marginBottom: '0.5rem' }}>Lernziele:</h4>
+                <ul style={{ paddingLeft: '1.2rem' }}>
+                  {myAIExercise.goals.map((goal, i) => (
+                    <li key={i} style={{ padding: '0.2rem 0', fontSize: '0.95rem' }}>{goal}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style={{ background: '#fef3c7', borderRadius: '8px', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                <strong>Vorbereitung:</strong> {myAIExercise.preparation}
+              </div>
+
+              <h4 style={{ marginBottom: '0.8rem' }}>Phase 1 – Tabelle erstellen:</h4>
+              <div style={{ overflowX: 'auto' }}>
+                <table className="phases-table" style={{ marginBottom: '1.5rem' }}>
+                  <thead>
+                    <tr>
+                      <th>Was weiß MyAI über mich?</th>
+                      <th>Warum weiß MyAI das?</th>
+                      <th>Was könnte ich dagegen tun?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {myAIExercise.tableRows.map((row, i) => (
+                      <tr key={i}>
+                        <td>{row.knows}</td>
+                        <td>{row.why}</td>
+                        <td>{row.action}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div style={{ background: '#ede9fe', borderRadius: '8px', padding: '1rem', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                <strong>Phase 2 – Diskussion:</strong> {myAIExercise.discussion}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Gesprächsleitfaden */}
+        <div className="card" style={{ marginBottom: '1rem' }}>
+          <button className="template-group-header" onClick={() => toggleTemplate('gespraechsleitfaden')}>
+            <h3><MessageCircle size={18} style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} />Gesprächsleitfaden für Betroffene</h3>
+            {expandedTemplates['gespraechsleitfaden'] ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+          </button>
+          {expandedTemplates['gespraechsleitfaden'] && (
+            <div style={{ marginTop: '1rem' }}>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                Dieser Leitfaden basiert auf dem pädagogischen Grundsatz: <strong>Aufklären statt verurteilen.</strong>
+              </p>
+              {conversationGuide.sections.map((section, i) => (
+                <div key={i} style={{ marginBottom: '1.5rem', padding: '1rem', background: i % 2 === 0 ? '#f0fdf4' : '#eff6ff', borderRadius: '8px' }}>
+                  <h4 style={{ marginBottom: '0.3rem' }}>{section.title}</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>
+                    <Heart size={14} style={{ verticalAlign: 'middle', marginRight: '0.3rem' }} />
+                    Ziel: {section.goal}
+                  </p>
+                  {section.examples.map((example, j) => (
+                    <div key={j} style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                      <MessageCircle size={14} style={{ flexShrink: 0, marginTop: '3px', color: '#6366f1' }} />
+                      <span style={{ fontSize: '0.95rem', lineHeight: '1.5' }}>{example}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

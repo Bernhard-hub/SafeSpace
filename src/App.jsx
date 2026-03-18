@@ -8,6 +8,7 @@ import Prevention from './pages/Prevention'
 import Resources from './pages/Resources'
 import Settings from './pages/Settings'
 import AIAdvisor from './pages/AIAdvisor'
+import WorkshopGuide from './pages/WorkshopGuide'
 import { DataProvider } from './context/DataContext'
 import './styles/App.css'
 
@@ -57,6 +58,8 @@ function App() {
         return <Resources />
       case 'ai-advisor':
         return <AIAdvisor />
+      case 'workshop-guide':
+        return <WorkshopGuide />
       case 'settings':
         return <Settings />
       default:

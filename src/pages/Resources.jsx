@@ -9,7 +9,8 @@ import {
   AlertCircle,
   ChevronDown,
   ChevronRight,
-  Globe
+  Globe,
+  Lock
 } from 'lucide-react'
 import './Resources.css'
 
@@ -18,6 +19,62 @@ const categories = [
   { id: 'legal', label: 'Rechtliche Grundlagen', icon: Scale },
   { id: 'platforms', label: 'Plattform-Meldemechanismen', icon: Globe },
   { id: 'phenomena', label: 'Phänomene & Begriffe', icon: AlertCircle },
+  { id: 'datenschutz', label: 'Datenschutz', icon: Lock },
+]
+
+const datenschutzDefinitions = [
+  { term: 'Datenschutz', definition: 'Das Recht, selbst zu entscheiden, wer wann welche persönlichen Daten einsehen darf, sowie der Schutz vor missbräuchlicher Datenverarbeitung.' },
+  { term: 'Privatsphäre', definition: 'Der Bereich einer Person, der nicht öffentlich ist, sondern ausschließlich die eigene Person und den engsten Lebensbereich angeht.' },
+  { term: 'Informationelle Selbstbestimmung', definition: 'Der verfassungsrechtliche Grundsatz, dass jeder Mensch grundsätzlich selbst bestimmen kann, wer was über ihn weiß.' },
+  { term: 'Personenbezogene Daten', definition: 'Alle Informationen, die unmittelbar mit einer bestimmten Person in Verbindung gebracht werden können (Name, Adresse, Telefonnummer, Geburtsdatum, IP-Adresse).' },
+  { term: 'Sensible Daten', definition: 'Besonders schützenswerte Daten, die den persönlichsten Lebensbereich betreffen; Nutzung ist streng reglementiert (ethnische Herkunft, politische Meinung, Gewerkschaftszugehörigkeit, religiöse Überzeugung, Gesundheit, Sexualleben).' },
+  { term: 'Digitaler Fußabdruck (Digital Footprint)', definition: 'Die Gesamtheit aller Daten, die beim Surfen aktiv hinterlassen oder passiv gespeichert werden.' },
+  { term: 'Digitale Identität', definition: 'Online-Abbild: Die Summe aller Informationen im Netz, die das Bild einer Person für andere prägen (Posts, Likes, Kommentare). Authentifizierung: Der technische Identitätsnachweis für Dienste (Handy-Signatur, Passwörter, Biometrie).' },
+  { term: '2-Faktor-Authentifizierung', definition: 'Zusätzliche Sicherheitsmaßnahme zum Schutz von Benutzer:innenkonten. Selbst wenn Passwörter in falsche Hände gelangen, haben Unbefugte keinen Zugriff auf Accounts.' },
+  { term: 'Creative Commons-Lizenz', definition: 'Ermöglicht Urheber:innen, Nutzungsrechte auf einfache Weise zu regeln. In der Regel erlauben die Lizenzen das kostenlose Kopieren, Teilen und Benutzen des Werkes für private bzw. nicht-kommerzielle Zwecke.' },
+  { term: 'Urheberrecht', definition: 'Schützt alle Werke, die eine eigentümliche (individuelle, originelle) geistige Schöpfung darstellen. Kreative Werke sind automatisch geschützt und die Verwertungsrechte stehen ausschließlich dem/der Urheber:in zu.' },
+  { term: 'Trusted Flagger', definition: 'Im Sinne des Digital Services Act anerkannte Meldestellen für illegale Hassrede und rechtswidrige Inhalte. Onlineplattformen sind verpflichtet, Meldungen von Trusted Flaggern prioritär nachzugehen. In Österreich: Rat auf Draht und Internet Ombudsstelle.' },
+  { term: 'Digital Services Act (DSA)', definition: 'EU-Verordnung mit Haftungs- und Sicherheitsvorschriften für digitale Plattformen. Verpflichtet große Plattformen zu besonderem Schutz für Jugendliche: Werbeverbot für Minderjährige, Schutz vor Sucht-Design, Transparenz bei Algorithmen.' },
+]
+
+const datenschutzLegal = [
+  { title: '§ 1 DSG – Grundrecht auf Datenschutz', content: 'Verankerung des Anspruchs auf Geheimhaltung personenbezogener Daten in der österreichischen Verfassung.' },
+  { title: 'Artikel 8 EMRK – Achtung des Privatlebens', content: 'Das internationale Gebot der Achtung des Privat- und Familienlebens.' },
+  { title: 'Betroffenenrechte laut DSG', content: 'Auskunft: Wer verarbeitet was, woher und wozu? Richtigstellung: Korrektur unrichtiger Daten. Löschung: Entfernung unzulässiger Daten („Recht auf Vergessenwerden"). Widerspruch: Untersagung der Weiterverwendung.' },
+  { title: 'Digital Services Act (DSA) – Schutz für Minderjährige', content: 'Werbeverbot: Keine personalisierte Werbung für Minderjährige. Schutz vor Sucht-Design: Verbot von manipulativen Belohnungssystemen. Trusted Flagger: Rat auf Draht und Internet Ombudsstelle als prioritäre Meldestellen. Transparenz: Plattformen müssen Algorithmen offenlegen.' },
+  { title: 'Recht am eigenen Bild', content: 'Die Veröffentlichung von Fotos ist unzulässig, wenn dadurch berechtigte Interessen verletzt werden. Bloßstellung ist unzulässig. Grundsatz: Vor dem Posten immer um Erlaubnis fragen!' },
+]
+
+const datenschutzFAQ = [
+  { target: 'Betroffene', question: 'Wie kann man seine Spuren im Netz überprüfen?', answer: 'Regelmäßig nach dem eigenen Namen suchen, Google-Alert einrichten, umgekehrte Bildersuche nutzen.' },
+  { target: 'Betroffene', question: 'Was kann ich tun, wenn mein Profil gehackt wurde?', answer: 'Sofort Passwort über „Passwort vergessen" zurücksetzen. Hinterlegte Daten kontrollieren und Zwei-Faktor-Authentifizierung aktivieren. Kontakte über den Hack informieren.' },
+  { target: 'Betroffene', question: 'Wohin kann ich mich wenden, wenn meine Privatsphäre verletzt wurde?', answer: 'Inhalte direkt bei der Plattform melden. Bei Verstoß: Rat auf Draht (147), Internet Ombudsstelle, Digital Services Act Koordinator oder KommAustria kontaktieren.' },
+  { target: 'Lehrkräfte', question: 'Wie erfahre ich, was das Internet über mich weiß?', answer: 'Suche regelmäßig nach deinem Namen in Anführungszeichen. Google Alert einrichten für automatische Benachrichtigungen bei neuen Inhalten.' },
+  { target: 'Eltern', question: 'Ab wann darf mein Kind soziale Netzwerke nutzen?', answer: 'Das hängt vom Netzwerk ab. Der Digital Services Act (DSA) verpflichtet Plattformen, das Alter der Nutzer:innen besser zu prüfen, um Minderjährige vor ungeeigneten Inhalten zu schützen.' },
+  { target: 'Eltern', question: 'Wie kann ich mein Kind beim Datenschutz unterstützen?', answer: 'Gemeinsam die Privatsphäre-Einstellungen durchgehen. Profile standardmäßig auf „privat" stellen. Sensible Daten wie Wohnadresse oder Telefonnummer niemals öffentlich sichtbar machen.' },
+  { target: 'Eltern', question: 'Welche Einstellungen schützen die Privatsphäre meiner Kinder?', answer: 'Profil für Suchmaschinen unsichtbar machen. Sichtbarkeit persönlicher Daten einschränken. Sichtbarkeit der Inhalte checken: Je weniger, desto besser. Melden, Blockieren und Entfernen lernen.' },
+  { target: 'Eltern', question: 'Was tun, wenn ein Social Media Profil gehackt wurde?', answer: 'Zugriff überprüfen. Wenn Einloggen funktioniert: Sofort Passwort ändern, hinterlegte Daten kontrollieren, letzte Aktivität prüfen. Wenn kein Zugriff: „Passwort vergessen" nutzen. Kontakte informieren und 2FA aktivieren.' },
+]
+
+const browserHygiene = [
+  { title: 'Cookies löschen', description: 'Kleine Dateien, die das Surfverhalten protokollieren. In den Browsereinstellungen unter „Datenschutz und Sicherheit" regelmäßig löschen.' },
+  { title: 'Cache und Verlauf leeren', description: 'Der Verlauf zeigt besuchte Seiten, der Cache speichert Teile davon. Leeren verhindert, dass Dritte Aktivitäten nachvollziehen.' },
+  { title: 'Privater Modus nutzen', description: 'Inkognito / InPrivate: Keine Verlaufsdaten oder Cookies werden dauerhaft gespeichert.' },
+  { title: 'HTTPS beachten', description: 'In der Adresszeile auf das Schlosssymbol und https:// achten – verschlüsselte Übertragung.' },
+  { title: 'Öffentliches WLAN meiden', description: 'Keine unverschlüsselten öffentlichen Netzwerke für sensible Logins nutzen.' },
+]
+
+const securityTips = [
+  'Nicht zu viel preisgeben: Einmal im Netz, bleibt es oft im Netz.',
+  'Persönliche Daten geheim halten: Wohnadresse, Telefonnummer und Passwörter gehen Fremde nichts an.',
+  'Sichere Passwörter: Mind. 10 Zeichen, Mix aus Zeichenarten, für jedes Konto ein eigenes.',
+  'Computer schützen: Firewall, Antiviren-Programm und regelmäßige Updates sind Pflicht.',
+  'Profile schützen: Privatsphäre-Einstellungen regelmäßig prüfen; Zugriff nur für Freunde.',
+  'Vorsicht an öffentlichen PCs: Stets ausloggen, keine Login-Daten speichern.',
+  'Inaktive Accounts löschen: Nicht mehr genutzte Profile entfernen.',
+  'Recht am eigenen Bild: Vor dem Posten von Fotos anderer immer um Erlaubnis fragen.',
+  'Nach sich selbst suchen: Regelmäßig das digitale Image per Suchmaschine kontrollieren.',
+  'Festplatten sicher löschen: Vor Verkauf oder Entsorgung Daten mit einem Daten-Shredder vernichten.',
 ]
 
 const hotlines = [
@@ -494,6 +551,122 @@ function Resources() {
                     </div>
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+      {/* Datenschutz */}
+      {activeCategory === 'datenschutz' && (
+        <section className="resource-section fade-in">
+          <h2>Datenschutz – Wissen & Praxis</h2>
+          <p className="section-intro">
+            Definitionen, rechtlicher Rahmen, technische Tipps und FAQ rund um Datenschutz in der pädagogischen Arbeit.
+          </p>
+
+          {/* Definitionen & Glossar */}
+          <h3 style={{ margin: '1.5rem 0 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <BookOpen size={20} />
+            Definitionen & Glossar
+          </h3>
+          <div className="phenomena-search" style={{ marginBottom: '1rem' }}>
+            <Search size={18} />
+            <input
+              type="text"
+              placeholder="Begriff suchen..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="glossary-list">
+            {datenschutzDefinitions
+              .filter(d => d.term.toLowerCase().includes(searchTerm.toLowerCase()) || d.definition.toLowerCase().includes(searchTerm.toLowerCase()))
+              .map((item, idx) => (
+                <div key={idx} className="glossary-item card">
+                  <h3 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>{item.term}</h3>
+                  <p className="glossary-definition">{item.definition}</p>
+                </div>
+              ))}
+          </div>
+
+          {/* Rechtlicher Rahmen */}
+          <h3 style={{ margin: '2rem 0 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Scale size={20} />
+            Rechtlicher Rahmen
+          </h3>
+          <div className="legal-list">
+            {datenschutzLegal.map((item, idx) => (
+              <div key={idx} className="legal-item card">
+                <button className="legal-header" onClick={() => toggleExpanded(`ds-legal-${idx}`)}>
+                  <Scale size={20} />
+                  <span>{item.title}</span>
+                  {expandedItems[`ds-legal-${idx}`] ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+                </button>
+                {expandedItems[`ds-legal-${idx}`] && (
+                  <div className="legal-content">
+                    <p>{item.content}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* FAQ */}
+          <h3 style={{ margin: '2rem 0 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <AlertCircle size={20} />
+            FAQ – Häufige Fragen
+          </h3>
+          {['Betroffene', 'Lehrkräfte', 'Eltern'].map(target => {
+            const faqs = datenschutzFAQ.filter(f => f.target === target)
+            if (faqs.length === 0) return null
+            return (
+              <div key={target} style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ margin: '0 0 0.8rem', color: 'var(--text-secondary)', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  {target}
+                </h4>
+                {faqs.map((faq, idx) => (
+                  <div key={idx} className="legal-item card" style={{ marginBottom: '0.5rem' }}>
+                    <button className="legal-header" onClick={() => toggleExpanded(`faq-${target}-${idx}`)}>
+                      <span style={{ fontWeight: 600 }}>{faq.question}</span>
+                      {expandedItems[`faq-${target}-${idx}`] ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+                    </button>
+                    {expandedItems[`faq-${target}-${idx}`] && (
+                      <div className="legal-content">
+                        <p>{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )
+          })}
+
+          {/* Browser-Hygiene */}
+          <h3 style={{ margin: '2rem 0 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Globe size={20} />
+            Browser-Hygiene
+          </h3>
+          <div className="hotlines-grid">
+            {browserHygiene.map((item, idx) => (
+              <div key={idx} className="card" style={{ padding: '1.2rem' }}>
+                <h4 style={{ margin: '0 0 0.5rem', color: 'var(--primary)' }}>{item.title}</h4>
+                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 10 Sicherheitstipps */}
+          <h3 style={{ margin: '2rem 0 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Lock size={20} />
+            10 Sicherheitstipps zum Datenschutz
+          </h3>
+          <div className="card" style={{ padding: '1.5rem' }}>
+            {securityTips.map((tip, idx) => (
+              <div key={idx} style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start', padding: '0.6rem 0', borderBottom: idx < securityTips.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
+                <span style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 700, flexShrink: 0 }}>
+                  {idx + 1}
+                </span>
+                <span style={{ fontSize: '0.95rem', lineHeight: '1.5' }}>{tip}</span>
               </div>
             ))}
           </div>

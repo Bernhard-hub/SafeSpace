@@ -8,7 +8,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Heart,
-  Bot
+  Bot,
+  GraduationCap
 } from 'lucide-react'
 import './Sidebar.css'
 
@@ -17,6 +18,7 @@ const menuItems = [
   { id: 'cases', label: 'Fallmanagement', icon: FolderOpen },
   { id: 'ai-advisor', label: 'KI-Beratung', icon: Bot, highlight: true },
   { id: 'prevention', label: 'Prävention', icon: Shield },
+  { id: 'workshop-guide', label: 'Workshop-Begleiter', icon: GraduationCap },
   { id: 'resources', label: 'Ressourcen', icon: BookOpen },
   { id: 'settings', label: 'Einstellungen', icon: Settings },
 ]

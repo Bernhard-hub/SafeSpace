@@ -249,6 +249,50 @@ const knowledgeBase = {
       "Auswirkungen auf Betroffene/n"
     ]
   },
+  datenschutz: {
+    erstgespraech: [
+      "Danke, dass du dich meldest. Datenschutz ist ein wichtiges Thema.",
+      "Deine persönlichen Daten gehören dir – du bestimmst, wer sie sieht.",
+      "Es ist gut, dass du dich informieren möchtest.",
+      "Magst du erzählen, was passiert ist oder was du wissen möchtest?"
+    ],
+    fragen: [
+      "Welche Daten wurden ohne dein Einverständnis weitergegeben?",
+      "Auf welcher Plattform ist das passiert?",
+      "Hast du bereits versucht, die Daten löschen zu lassen?",
+      "Weißt du, wer deine Daten weitergegeben hat?",
+      "Sind Fotos oder persönliche Informationen betroffen?"
+    ],
+    empathie: [
+      "Es ist verständlich, dass du dich unwohl fühlst, wenn deine Daten missbraucht werden.",
+      "Du hast das Recht auf Schutz deiner persönlichen Informationen.",
+      "Niemand darf deine Daten ohne dein Einverständnis weitergeben."
+    ],
+    sofortmassnahmen: [
+      "Überprüfe deine Privatsphäre-Einstellungen auf allen Plattformen.",
+      "Mache dein Profil privat – nur bestätigte Kontakte sehen deine Inhalte.",
+      "Lösche alte Accounts, die du nicht mehr nutzt.",
+      "Nutze die umgekehrte Bildersuche, um zu prüfen, wo deine Fotos auftauchen.",
+      "Richte Google Alerts für deinen Namen ein.",
+      "Aktiviere die Zwei-Faktor-Authentifizierung auf allen Konten.",
+      "Melde Datenschutzverstöße bei der Plattform und ggf. bei der Internet Ombudsstelle."
+    ],
+    elterngespraech: [
+      "Gemeinsam die Privatsphäre-Einstellungen durchgehen.",
+      "Profile standardmäßig auf 'privat' stellen.",
+      "Sensible Daten niemals öffentlich sichtbar machen.",
+      "Über das Recht am eigenen Bild aufklären.",
+      "Beratungsstellen empfehlen: Rat auf Draht (147), Saferinternet.at"
+    ],
+    dokumentation: [
+      "Welche Daten wurden preisgegeben oder missbraucht",
+      "Auf welchen Plattformen sind die Daten sichtbar",
+      "Screenshots der betroffenen Inhalte",
+      "Zeitpunkt der Entdeckung",
+      "Bereits unternommene Schritte (Meldungen, Löschanfragen)",
+      "Auswirkungen auf die betroffene Person"
+    ]
+  },
   cyberstalking: {
     erstgespraech: [
       "Wenn dich jemand wiederholt online kontaktiert oder überwacht, kann das sehr beängstigend sein.",
@@ -305,6 +349,7 @@ const caseTypes = [
   { value: 'identitaetsdiebstahl', label: 'Identitätsdiebstahl' },
   { value: 'hassrede', label: 'Hassrede/Hate Speech' },
   { value: 'cyberstalking', label: 'Cyberstalking' },
+  { value: 'datenschutz', label: 'Datenschutz/Privatsphäre' },
 ]
 
 function AIAdvisor() {

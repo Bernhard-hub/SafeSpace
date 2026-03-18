@@ -1,0 +1,662 @@
+/* WorkshopGuide.css */
+
+.workshop-guide {
+  max-width: 960px;
+}
+
+/* Header */
+.workshop-guide-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.wg-header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.wg-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+/* Sections */
+.wg-section {
+  margin-bottom: var(--space-3xl);
+}
+
+.wg-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
+}
+
+.wg-section .section-title svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.wg-section .section-intro {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+  font-size: 1rem;
+}
+
+/* Content Card */
+.wg-content-card p {
+  line-height: 1.7;
+}
+
+/* Definition Box */
+.wg-definition-box {
+  background: var(--color-primary-bg);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.wg-definition-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-sm);
+  font-size: 1.05rem;
+}
+
+.wg-definition-box p {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+/* Visual Metaphor - Puzzle */
+.wg-visual-metaphor {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.wg-puzzle-pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.wg-puzzle-piece {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.wg-puzzle-piece:nth-child(odd) {
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+}
+
+.wg-metaphor-text {
+  font-style: italic;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Detective Methods Grid */
+.wg-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.wg-method-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.wg-method-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.wg-method-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-sm);
+}
+
+.wg-method-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Data Table */
+.wg-table-card {
+  overflow: hidden;
+}
+
+.wg-data-table th {
+  background: var(--color-bg-secondary);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: none;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.wg-table-term {
+  white-space: nowrap;
+  color: var(--color-primary-dark);
+}
+
+.wg-table-examples {
+  color: var(--color-text-secondary);
+  font-size: 0.93rem;
+}
+
+/* Expandable Cards */
+.wg-expandable-card {
+  margin-bottom: var(--space-md);
+}
+
+.wg-expand-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.wg-expand-header svg:last-child {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.wg-expand-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.wg-expand-title svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.wg-expand-title h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.wg-expand-content {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* Checklist */
+.wg-checklist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.wg-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  line-height: 1.6;
+}
+
+.wg-check-icon {
+  color: var(--color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.wg-x-icon {
+  color: var(--color-danger);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.wg-info-icon {
+  color: var(--color-info);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* App Cards */
+.wg-app-card {
+  margin-bottom: var(--space-lg);
+}
+
+.wg-tipps-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.wg-tipp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  line-height: 1.6;
+}
+
+.wg-tipp-item .wg-check-icon {
+  margin-top: 3px;
+}
+
+/* Warning Box */
+.wg-warning-box {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.wg-warning-box svg {
+  color: var(--color-warning);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Password Cards */
+.wg-tipps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.wg-password-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.wg-password-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.wg-password-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.wg-password-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Emergency Section */
+.wg-emergency-section {
+  position: relative;
+}
+
+.wg-emergency-title {
+  color: var(--color-accent-coral) !important;
+}
+
+.wg-emergency-title svg {
+  color: var(--color-accent-coral) !important;
+}
+
+.wg-emergency-card {
+  border-left: 4px solid var(--color-accent-coral);
+  background: linear-gradient(135deg, var(--color-bg-card), #FFF5F2);
+}
+
+.wg-emergency-card .wg-expand-title svg {
+  color: var(--color-accent-coral);
+}
+
+/* Steps List */
+.wg-steps-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.wg-steps-list li {
+  counter-increment: steps;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  line-height: 1.6;
+}
+
+.wg-steps-list li::before {
+  content: counter(steps);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-coral);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.wg-step-label {
+  font-weight: 600;
+  color: var(--color-accent-coral);
+}
+
+/* Beratung Grid */
+.wg-beratung-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.wg-beratung-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.wg-beratung-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.wg-beratung-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-dark);
+}
+
+.wg-beratung-detail {
+  font-weight: 500;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-xs) !important;
+}
+
+.wg-beratung-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin: 0 !important;
+}
+
+.wg-external-icon {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+/* Exercise Legend */
+.wg-exercise-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.wg-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.wg-legend-red {
+  background: #FDE8E8;
+  color: #C85C5C;
+}
+
+.wg-legend-red::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #C85C5C;
+}
+
+.wg-legend-blue {
+  background: #E0EDFF;
+  color: #5C7DA8;
+}
+
+.wg-legend-blue::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5C7DA8;
+}
+
+.wg-legend-neutral {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-muted);
+}
+
+.wg-legend-neutral::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+/* Datentabelle Grid */
+.wg-datentabelle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.wg-daten-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border-light);
+  background: var(--color-bg-card);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+  font-size: 0.93rem;
+  text-align: left;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.wg-daten-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.wg-daten-indicator {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Neutral state */
+.wg-daten-neutral {
+  background: var(--color-bg-card);
+  border-color: var(--color-border-light);
+}
+
+.wg-daten-neutral .wg-daten-indicator {
+  color: var(--color-text-muted);
+}
+
+/* Red state */
+.wg-daten-red {
+  background: #FDE8E8;
+  border-color: #E8A0A0;
+}
+
+.wg-daten-red .wg-daten-indicator {
+  color: #C85C5C;
+}
+
+/* Blue state */
+.wg-daten-blue {
+  background: #E0EDFF;
+  border-color: #A0BDE0;
+}
+
+.wg-daten-blue .wg-daten-indicator {
+  color: #5C7DA8;
+}
+
+/* Exercise Summary */
+.wg-exercise-summary {
+  text-align: center;
+}
+
+.wg-exercise-summary h3 {
+  margin-bottom: var(--space-lg);
+}
+
+.wg-summary-counts {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.wg-summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 1rem;
+}
+
+.wg-summary-red {
+  color: #C85C5C;
+}
+
+.wg-summary-blue {
+  color: #5C7DA8;
+}
+
+.wg-summary-neutral {
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wg-methods-grid,
+  .wg-tipps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wg-beratung-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wg-datentabelle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wg-summary-counts {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .wg-datentabelle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wg-exercise-legend {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .wg-summary-counts {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .wg-expand-title h3 {
+    font-size: 1.05rem;
+  }
+
+  .wg-header-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .wg-header-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
