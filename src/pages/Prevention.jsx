@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Shield, BookOpen, Users, Clock, Download, Play, ExternalLink, FileText, ChevronDown, ChevronRight, Copy, CheckCircle, MessageCircle, Lightbulb, Heart, Table, HelpCircle } from 'lucide-react'
+import { Shield, BookOpen, Users, Clock, Download, Play, ExternalLink, FileText, ChevronDown, ChevronRight, Copy, CheckCircle, MessageCircle, Lightbulb, Heart, Table, HelpCircle, Smartphone } from 'lucide-react'
 import './Prevention.css'
 
 const workshopModules = [
