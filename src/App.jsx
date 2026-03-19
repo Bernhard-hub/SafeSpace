@@ -53,7 +53,7 @@ function App() {
       case 'case-detail':
         return <CaseDetail caseId={selectedCaseId} onNavigate={navigateTo} />
       case 'prevention':
-        return <Prevention />
+        return <Prevention onNavigate={navigateTo} />
       case 'resources':
         return <Resources />
       case 'ai-advisor':

@@ -154,7 +154,7 @@ const externalResources = [
   { name: 'ZARA – #GegenHassimNetz', url: 'https://www.zara.or.at', description: 'Beratung und Meldung bei Hasspostings' },
 ]
 
-function Prevention() {
+function Prevention({ onNavigate }) {
   const [expandedWorkshop, setExpandedWorkshop] = useState(null)
   const [expandedTemplates, setExpandedTemplates] = useState({})
   const [copiedId, setCopiedId] = useState(null)
@@ -248,6 +248,32 @@ function Prevention() {
                     </div>
                   )}
                 </>
+              )}
+
+              {workshop.id === 5 && onNavigate && (
+                <button
+                  className="btn btn-primary workshop-begleiter-btn"
+                  onClick={() => onNavigate('workshop-guide')}
+                  style={{
+                    marginTop: '1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    width: '100%',
+                    justifyContent: 'center',
+                    padding: '0.9rem 1.5rem',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '10px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <Shield size={20} />
+                  Workshop-Begleiter für Schüler:innen öffnen
+                </button>
               )}
             </div>
           ))}

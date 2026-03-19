@@ -610,6 +610,12 @@
   color: var(--color-text-muted);
 }
 
+/* Table container für horizontales Scrollen */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .wg-methods-grid,
@@ -631,25 +637,72 @@
 }
 
 @media (max-width: 600px) {
+  /* Grundlayout für Mobile */
+  .workshop-guide {
+    padding: 0 var(--space-sm);
+  }
+
+  .workshop-guide-header h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .wg-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Sektionen kompakter */
+  .wg-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .wg-section .section-title {
+    font-size: 1.15rem;
+  }
+
+  /* Grids auf 1 Spalte */
   .wg-datentabelle-grid {
     grid-template-columns: 1fr;
   }
 
-  .wg-exercise-legend {
-    flex-direction: column;
-    gap: var(--space-sm);
+  .wg-methods-grid,
+  .wg-tipps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 
-  .wg-summary-counts {
-    flex-direction: column;
-    align-items: center;
+  .wg-beratung-grid {
+    grid-template-columns: 1fr;
     gap: var(--space-md);
+  }
+
+  /* Größere Touch-Targets */
+  .wg-daten-item {
+    padding: var(--space-md);
+    font-size: 1rem;
+    min-height: 52px;
+  }
+
+  .wg-expand-header {
+    padding: var(--space-sm) 0;
+    min-height: 48px;
   }
 
   .wg-expand-title h3 {
     font-size: 1.05rem;
   }
 
+  /* Expandable Cards besser auf Touch */
+  .wg-expandable-card {
+    padding: var(--space-md);
+  }
+
+  .wg-tipp-item {
+    padding: var(--space-md);
+    font-size: 0.95rem;
+  }
+
+  /* Header Icon kleiner */
   .wg-header-icon {
     width: 56px;
     height: 56px;
@@ -658,5 +711,78 @@
   .wg-header-icon svg {
     width: 28px;
     height: 28px;
+  }
+
+  /* Method/Password Cards */
+  .wg-method-card,
+  .wg-password-card {
+    padding: var(--space-lg);
+  }
+
+  .wg-method-card p,
+  .wg-password-card p {
+    font-size: 0.95rem;
+  }
+
+  /* Legende */
+  .wg-exercise-legend {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .wg-legend-item {
+    font-size: 0.85rem;
+  }
+
+  /* Summary */
+  .wg-summary-counts {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  /* Beratung Cards */
+  .wg-beratung-card {
+    padding: var(--space-md);
+  }
+
+  .wg-beratung-card h3 {
+    font-size: 1rem;
+  }
+
+  /* Notfall-Schritte */
+  .wg-steps-list li {
+    padding: var(--space-md);
+    font-size: 0.95rem;
+  }
+
+  /* Warning Box */
+  .wg-warning-box {
+    padding: var(--space-md);
+    font-size: 0.9rem;
+  }
+
+  /* Content Card */
+  .wg-content-card {
+    padding: var(--space-md);
+  }
+
+  .wg-content-card p {
+    font-size: 0.95rem;
+  }
+
+  /* Puzzle Pieces */
+  .wg-puzzle-pieces {
+    gap: var(--space-xs);
+  }
+
+  .wg-puzzle-piece {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  /* Definition Box */
+  .wg-definition-box {
+    padding: var(--space-md);
   }
 }
